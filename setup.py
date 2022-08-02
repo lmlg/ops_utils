@@ -25,8 +25,15 @@ tests_require = [
 ]
 
 setup(
+    name='ops_utils',
+    version=version,
+    description='Collection of utilities for operator framework charms',
     license='Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0',
+    author_email='openstack-discuss@lists.openstack.org',
+    author='OpenStack Charmers',
     packages=find_packages(exclude=["unit_tests"]),
     zip_safe=False,
     install_requires=install_require,
+    tests_require=tests_require,
+    extras_require={'testing': tests_require},
 )
