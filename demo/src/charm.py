@@ -2,7 +2,7 @@
 
 from ops.main import main
 from ops_openstack.core import OSBaseCharm
-from ops_utils import inherit_actions
+from ops_wander import inherit_actions
 
 # This will import every action, and together with the
 # call to 'inherit_actions' below will allow the charm class

@@ -25,7 +25,7 @@ tests_require = [
 ]
 
 setup(
-    name='ops_utils',
+    name='ops_wander',
     version=version,
     description='Collection of utilities for operator framework charms',
     license='Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0',

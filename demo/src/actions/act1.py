@@ -2,7 +2,7 @@
 of how actions can be easily refactored to work with an operator
 framework charm."""
 
-from ops_utils.actions import (
+from ops_wander.actions import (
     ops_action, action_get, action_set, action_fail, log)
 
 

@@ -1,5 +1,5 @@
-from ops_utils.actions import (ops_action, action_get, action_set,
-                               action_fail, inherit_actions)
+from ops_wander.actions import (ops_action, action_get, action_set,
+                                action_fail, inherit_actions)
 import mock
 import unittest
 

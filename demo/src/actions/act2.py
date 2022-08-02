@@ -1,4 +1,4 @@
-from ops_utils.actions import (
+from ops_wander.actions import (
     ops_action, action_get, action_fail, action_set, log)
 
 

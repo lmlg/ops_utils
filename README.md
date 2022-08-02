@@ -1,2 +1,3 @@
-# ops_utils
-collection of utilities for operator framework charms
+# ops_wander
+Collection of utilities for openstack charms. Their main purpose
+is to ease the transition to / from operator framework charms.
