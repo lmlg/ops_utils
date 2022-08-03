@@ -85,9 +85,9 @@ def action_modules(path):
        so that charms may define an __init__.py file for actions
        and place the result of this call as __all__, and make the
        charm inherit all the actions' implementations."""
-    files = glob.glob(os.join(os.dirname(path), "*.py"))
-    return [os.basename(f)[:-3] for f in files
-            if os.isfile(f) and not f.endswith('__init__.py')]
+    files = glob.glob(os.path.join(os.path.dirname(path), "*.py"))
+    return [os.path.basename(f)[:-3] for f in files
+            if os.path.isfile(f) and not f.endswith('__init__.py')]
 
 
 def inherit_actions(inst):
