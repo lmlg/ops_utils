@@ -7,7 +7,7 @@ from ops_wander import inherit_actions
 # This will import every action, and together with the
 # call to 'inherit_actions' below will allow the charm class
 # to utilize every action as a method.
-import actions   # noqa: F401
+from actions import *   # noqa: F401,F403
 
 
 class DemoCharm(OSBaseCharm):
