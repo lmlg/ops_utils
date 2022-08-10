@@ -14,8 +14,8 @@
 
 import errno
 import glob
+from logging import log, DEBUG, INFO, WARNING, ERROR, CRITICAL
 import os
-import subprocess
 import threading
 
 _thread_local = threading.local()
@@ -37,28 +37,6 @@ def action_set(*args, **kwargs):
 def action_fail(*args, **kwargs):
     """Set the failure reason for an action."""
     return _thread_local.event.fail(*args, **kwargs)
-
-
-def log(message, level=None):
-    """Write a message to the juju log"""
-    command = ['juju-log']
-    if level:
-        command += ['-l', level]
-    if not isinstance(message, str):
-        message = repr(message)
-    command += [message[:_MAX_ARGS]]
-    # Prefer writing directly to the juju log rather than through
-    # the event's 'log' method (which is typically just a basic
-    # python logger object).
-    try:
-        subprocess.call(command)
-    except OSError as e:
-        if e.errno != errno.ENOENT:
-            raise
-        elif level:
-            message = "{}: {}".format(level, message)
-        message = "juju-log: {}".format(message)
-        _thread_local.event.log(message)
 
 
 def clear_event():

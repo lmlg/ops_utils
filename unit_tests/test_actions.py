@@ -12,7 +12,6 @@ class MockEvent:
 
         self.set_results = mock.MagicMock()
         self.fail = mock.MagicMock()
-        self.log = mock.MagicMock()
 
 
 @ops_action('dummy')
